@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+
+}
+
+.row {
+  font-size: 0px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.box {
+  width: calc(100% / 3 - 20px);
+  margin: 10px;
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+  }
+
+.box-overlay {
+    display: inline-block;
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+}
+
+.box:hover .box-overlay {
+    visibility: visible;
+    
+}
+
+.box::after {
+    content: "\2665";
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bolder;
+}
+
+.box:hover::after {
+    color: red;
+}
+.labels-container {
+position: absolute;
+bottom: 10px;
+left: 5px;
+}
+.label {
+    color: white;
+    text-align: center;
+    font-size: small;
+    padding: 3px;
+    display: inline-block;
+  }
+  
+  .label-discount {
+    background-color: #eb0037;
+  }
+  
+  .label-sustainability {
+    background-color: #00875a;
+  }
+
+.brand {
+  color: gray;
+  font-weight: lighter;
+  font-size: small;
+}
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: medium;
+}
+
+.price {
+  color: #eb0037;
+  font-size: small;
+}
+
+.full-price {
+  color: gray;
+  font-size: small;
+  text-decoration: line-through;
+}
+
+.full-price::after,
+.price::after {
+  content: " \20AC";
+}
